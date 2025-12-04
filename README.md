@@ -1,56 +1,61 @@
-# Counter App — React + Vite + Tailwind template
+# Portfolio (simple)
 
-Lightweight starter template for React (JSX) using Vite and Tailwind CSS.
+A small personal portfolio built with React, Vite and Tailwind CSS.
 
-**Quick Overview**
+This README is intentionally simple and accurate for the current repository state.
 
-- **Tech:** React, Vite, Tailwind CSS
-- **Project:** Minimal counter example located in `src/`
+**Author:** Jubayar Ahamad
 
-**Requirements**
+**Tech:** React, Vite, Tailwind CSS
 
-- Node.js 16+ and npm (or pnpm/yarn)
+**Node requirement:** Node.js 24 or later
 
-**Get Started**
+**What's in this repo (what this project currently contains):**
 
-1. Install dependencies:
+- `index.html`, Vite entry file
+- `src/main.jsx` — app bootstrap
+- `src/App.jsx` — root component
+- `src/index.css` — Tailwind imports and base styles
+- `src/components/` — small components (`Bio.jsx`, `Image.jsx`, `Social.jsx`)
+- `public/` — static assets (images, icons)
+
+**What this project does now:**
+
+- Renders a basic portfolio UI built with React + Tailwind
+- Includes small components for biography, image, and social links
+
+**What this project does NOT include (but might in future):**
+
+- A dedicated contact page or an email form (currently not included)
+- A projects CMS/back-end (projects are static entries)
+- Authentication or dynamic user content
+
+## Quick commands
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-2. Run development server:
+Run development server:
 
 ```bash
 npm run dev
 ```
 
-3. Build for production:
+Build for production:
 
 ```bash
 npm run build
 ```
 
-4. Preview production build locally:
+Preview production build:
 
 ```bash
 npm run preview
 ```
 
-**Available Scripts**
+## Deployment notes
 
-- `npm run dev` : Starts Vite dev server (hot reload).
-- `npm run build` : Builds the app for production into `dist/`.
-- `npm run preview` : Serves the production build locally.
-
-**Tailwind CSS**
-
-- Global Tailwind directives are in `src/index.css`.
-- Modify `tailwind.config.js` to update purge/content paths or extend theme.
-
-**Project Structure (important files)**
-
-- `index.html` — Vite entry HTML.
-- `src/main.jsx` — App bootstrap.
-- `src/App.jsx` — Main component (counter demo).
-- `src/index.css` — Tailwind import and base styles.
+Deploy to Vercel or Netlify by connecting the repository. Use `npm run build` as the build command; Vite output (`dist`) is published by default.
