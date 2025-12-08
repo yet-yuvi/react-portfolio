@@ -51,7 +51,7 @@ function App() {
     },
   ];
   return (
-    <div className='gap-4 p-4 bg-gray-200 flex flex-col items-center justify-center h-screen'>
+    <div className='gap-4 p-8 bg-gray-200 flex flex-col items-center justify-center h-full'>
       <Hero />
       <Projects projects={projects} />
     </div>
