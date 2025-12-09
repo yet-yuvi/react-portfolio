@@ -1,10 +1,26 @@
 import { useState } from 'react';
 
-function ProjectCard({ project }) {
-  const [likeCount, setLikeCount] = useState(0);
+const ReactionButton = ({ reaction, toggleLike }) => {
+  return (
+    <button
+      className={`px-4 py-1 text-white rounded ${
+        reaction === 'like'
+          ? 'bg-sky-500 hover:bg-sky-600'
+          : 'bg-gray-500 hover:bg-gray-600'
+      }`}
+      onClick={toggleLike}
+    >
+      {reaction === 'like' ? 'Like' : 'Unlike'}
+    </button>
+  );
+};
 
-  const incrementLike = () => {
-    setLikeCount(likeCount + 1);
+function ProjectCard({ project }) {
+
+  const [isLiked, setIsLiked] = useState(false);
+
+  const toggleLike = () => {
+    setIsLiked((prev) => !prev);
   };
 
   return (
@@ -20,12 +36,11 @@ function ProjectCard({ project }) {
         >
           View Project . .
         </a>
-        <button
-          onClick={incrementLike}
-          className='px-4 py-1 bg-sky-500 text-white rounded hover:bg-sky-600'
-        >
-          {`Like ${likeCount}`}
-        </button>
+        {isLiked ? (
+          <ReactionButton reaction='unlike' toggleLike={toggleLike} />
+        ) : (
+          <ReactionButton reaction='like' toggleLike={toggleLike} />
+        )}
       </div>
     </div>
   );
